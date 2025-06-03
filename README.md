@@ -67,6 +67,14 @@ Bu proje, Flutter ile geliştirilmiş modern ve responsive bir kütüphane uygul
 | `yazarlar.dart` | Yazar bilgileri ve eserleri |
 | `pdf_viewer_screen.dart` | Syncfusion PDF Viewer ile kitap görüntüleme |
 | `drawer.dart` | Material Design 3 uyumlu navigasyon menüsü |
+## 📱 Mobil Görüntüler
+
+![1](https://github.com/user-attachments/assets/eb79b691-c239-40b7-8f1c-387f5ab8d9bc)
+![2](https://github.com/user-attachments/assets/c16bb9c1-5431-4c89-aea4-dc83fbc8d70a)
+![3](https://github.com/user-attachments/assets/fe3542bd-1c95-4294-a798-ad59938d5aec)
+![4](https://github.com/user-attachments/assets/15e3dd3b-3045-418d-9eea-a380c9fff47d)
+![5](https://github.com/user-attachments/assets/6b3e0d62-6726-4cdf-9989-741caafd33db)
+
 
 ## 🔧 Kurulum
 
@@ -144,5 +152,6 @@ lib/
 Bu proje MIT lisansı altında lisanslanmıştır. Detaylar için `LICENSE` dosyasına bakınız.
 
 ---
+
 
 > 💡 **Not**: Bu uygulama sürekli geliştirilmektedir. Yeni özellikler ve iyileştirmeler düzenli olarak eklenmektedir.
