@@ -1,63 +1,148 @@
-# 📚 Kütüphane Uygulaması
+# 📚 Modern Kütüphane Uygulaması
 
-Bu proje, Flutter ile geliştirilen basit bir kütüphane uygulamasıdır. Kullanıcılar giriş yaparak kitapları görüntüleyebilir, yazarlar hakkında bilgi alabilir ve PDF kitaplara erişebilir. Uygulama responsive çalışmakta olup, özellikle web üzerinde PDF görüntüleme özelliği entegre edilmiştir.
+Bu proje, Flutter ile geliştirilmiş modern ve responsive bir kütüphane uygulamasıdır. Firebase ve Supabase entegrasyonları ile güçlendirilmiş, kullanıcı dostu bir arayüz sunmaktadır.
 
-> 🧑‍💻 Bu proje **Numan** ve **Mehmet** tarafından birlikte geliştirilmiştir.
+> 🧑‍💻 Bu proje **Numan Salih** ve **Mehmet Fatih** tarafından birlikte geliştirilmiştir.
 
----
+## 🚀 Özellikler
 
-## 🧙️ Projedeki Sayfalar ve Görevleri
+- 🔐 **Güvenli Kimlik Doğrulama**
+  - Firebase Authentication entegrasyonu
+  - Google Sign-In desteği
+  - Güvenli oturum yönetimi
+  - Github Sign-In entegrasyonu
+  - Mail-password entegrasyonu
 
-| Sayfa        | Görev                                                                 |
-|--------------|-----------------------------------------------------------------------|
-| `login.dart` | Kullanıcının giriş yapmasını sağlar. Basit kullanıcı adı ve şifre girişi mevcuttur. |
-| `kitaplik.dart` | Kitapların kapak resimleri ve isimlerini listeler. Her kitap bir PDF ile bağlantılıdır. |
-| `yazarlar.dart` | George Orwell, Stefan Zweig ve Jack London hakkında bilgi verir. |
-| `pdf_viewer_screen.dart` | Seçilen kitabın PDF'ini açar. Web'de çalışacak şekilde `SfPdfViewer.network` kullanılmıştır. |
-| `drawer.dart` | Uygulama genelinde kullanılan menü yapısı. Sayfalar arası geçiş sağlar. |
+- 📚 **Kitap Yönetimi**
+  - Kitap listesi görüntüleme
+  - PDF kitap okuma desteği
+  - Kitap detayları ve açıklamaları
+  - Responsive tasarım ile her cihazda optimal görüntüleme
 
----
+- 👥 **Yazar Profilleri**
+  - Detaylı yazar bilgileri
+  - Yazar eserleri listesi
+  - Biyografik bilgiler
 
-## 🖼 Drawer Menüsünde Kullanılan Logo
+- 📱 **Modern UI/UX**
+  - Material Design 3 uyumlu arayüz
+  - Özel fontlar (Google Fonts)
+  - Font Awesome ikonları
+  - Responsive tasarım
+  - Loading animasyonları
+  - Hata yakalama ve kullanıcı bildirimleri
 
-Drawer menüsünde üst kısımda gösterilen logo bir API üzerinden rastgele alınmamaktadır. Sabit bir görsel bağlantısı kullanılmıştır:
+## 🛠️ Kullanılan Teknolojiler
+
+### Backend & Veritabanı
+- **Firebase**
+  - Firebase Authentication (Kullanıcı girişi ve kimlik doğrulama)
+  - Cloud Firestore (Veri depolama)
+  - Google Sign-In entegrasyonu
+  - Github Sign-In entegrasyonu
+  - Mail-password entegrasyonu
+
+- **Supabase**
+  - Alternatif veritabanı çözümü
+  - Gerçek zamanlı veri senkronizasyonu
+
+### Frontend & UI
+- **Flutter SDK** (>=3.6.1)
+- **Syncfusion Flutter PDF Viewer** (PDF görüntüleme)
+- **Provider** (State management)
+- **Google Fonts** (Özel tipografi)
+- **Font Awesome** (İkonlar)
+
+### Diğer Araçlar
+- **HTTP** (API istekleri)
+- **Path Provider** (Dosya sistemi işlemleri)
+- **Flutter Lints** (Kod kalitesi kontrolü)
+
+## 📱 Uygulama Yapısı
+
+| Sayfa/Dosya | Açıklama |
+|-------------|-----------|
+| `login.dart` | Firebase Authentication ile güvenli giriş |
+| `kitaplik.dart` | Firestore/Supabase'den kitap verilerini çeken ana kitaplık sayfası |
+| `yazarlar.dart` | Yazar bilgileri ve eserleri |
+| `pdf_viewer_screen.dart` | Syncfusion PDF Viewer ile kitap görüntüleme |
+| `drawer.dart` | Material Design 3 uyumlu navigasyon menüsü |
+
+## 🔧 Kurulum
+
+1. **Gereksinimler**
+   ```bash
+   Flutter SDK >=3.6.1
+   Dart SDK >=3.0.0
+   ```
+
+2. **Bağımlılıkları Yükleme**
+   ```bash
+   flutter pub get
+   ```
+
+3. **Firebase Kurulumu**
+   - Firebase Console'dan yeni proje oluşturun
+   - `firebase_options.dart` dosyasını projeye ekleyin
+   - Authentication ve Firestore servislerini aktifleştirin
+
+4. **Supabase Kurulumu (Opsiyonel)**
+   - Supabase projenizi oluşturun
+   - `.env` dosyasına Supabase URL ve anon key ekleyin
+
+5. **Uygulamayı Çalıştırma**
+   ```bash
+   flutter run -d chrome  # Web için
+   flutter run            # Mobil için
+   ```
+
+## 📦 Proje Yapısı
 
 ```
-https://static.vecteezy.com/system/resources/previews/020/402/234/non_2x/library-book-reading-abstract-icon-or-emblem-vector.jpg
+lib/
+├── main.dart
+├── screens/
+│   ├── login.dart
+│   ├── kitaplik.dart
+│   ├── yazarlar.dart
+│   └── pdf_viewer_screen.dart
+├── widgets/
+│   └── drawer.dart
+├── services/
+│   ├── auth_service.dart
+│   └── database_service.dart
+└── models/
+    ├── book.dart
+    └── author.dart
 ```
 
-Başlangıçta Provider ile rastgele görsel kullanımı yapılmış, ancak daha sonra kullanıcı tarafından sabit bir logo tercih edilmiştir.
+## 👥 Geliştirici Katkıları
+
+- **Mehmet Fatih**
+  - Firebase entegrasyonu
+  - PDF görüntüleme sistemi
+  - GitHub yönetimi
+  - Kitaplık ve login ekranı
+  - Backend servisleri
+
+- **Numan Salih**
+  - UI/UX tasarımı
+  - Yazarlar sayfası
+  - Sayfa geçişleri
+  - Logo ve görsel yönetimi
+  - Frontend optimizasyonu
+
+## 🔐 Güvenlik Notları
+
+- Firebase Authentication ile güvenli kullanıcı yönetimi
+- Cloud Firestore güvenlik kuralları
+- Supabase RLS (Row Level Security) politikaları
+- Hassas bilgilerin .env dosyasında saklanması
+
+## 📝 Lisans
+
+Bu proje MIT lisansı altında lisanslanmıştır. Detaylar için `LICENSE` dosyasına bakınız.
 
 ---
 
-## 🔐 Login Bilgilerinin Saklanması
-
-Uygulamada herhangi bir veritabanı veya kimlik doğrulama sistemi kullanılmamaktadır.  
-**Login ekranı, kullanıcı adı ve şifreyi kontrol etmeden direkt yönlendirme yapmaktadır.**  
-Bu sayede odak, uygulamanın tasarımı ve sayfa geçişlerinde olmuştur.
-
----
-
-## 🧱 Grup Üyelerinin Katkısı
-
-- **Mehmet** → Proje yapısı, PDF gösterimi, GitHub entegrasyonu, kitaplık ve login ekranı
-- **Numan** → Yazarlar sayfası, tasarım detayları, sayfa geçişleri ve logo yönetimi
-
----
-
-## 📜 Diğer Anlatmak İstediklerimiz
-
-- PDF gösterimi için Syncfusion PDF Viewer kullanılmıştır.
-- Web desteği olduğu için projede `flutter_pdfview` yerine `SfPdfViewer` tercih edilmiştir.
-- Kullanıcı deneyimini geliştirmek için loading animasyonları, hata yakalama ve sade tema kullanılmıştır.
-
----
-
-## 🥮 Çalıştırmak İçin
-
-```bash
-flutter pub get
-flutter run -d chrome
-```
-
-ojede 
+> 💡 **Not**: Bu uygulama sürekli geliştirilmektedir. Yeni özellikler ve iyileştirmeler düzenli olarak eklenmektedir.
