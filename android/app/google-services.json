@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1018032806208",
+    "project_id": "library-app-5f40a",
+    "storage_bucket": "library-app-5f40a.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1018032806208:android:9ea6b00200d8f97c6c02a5",
+        "android_client_info": {
+          "package_name": "com.kutuphane.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1018032806208-r4uvcc09e5miivorlhdakrkk634rskt7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTGrj_pBp_xONJnxrY3UxlPIpwu9um_Ss"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1018032806208-r4uvcc09e5miivorlhdakrkk634rskt7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

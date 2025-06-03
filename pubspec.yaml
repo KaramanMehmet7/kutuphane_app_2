@@ -1,0 +1,51 @@
+name: kutuphane_app
+description: "A new Flutter project."
+
+# The following line prevents the package from being accidentally published to
+# pub.dev using `flutter pub publish`. This is preferred for private packages.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+# The following defines the version and build number for your application.
+version: 1.0.0+A
+
+environment:
+  sdk: ">=3.6.1 <4.0.0"  # SDK version aralığını belirttik
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Firebase paketleri
+  firebase_core: ^2.25.4
+  firebase_auth: ^4.17.4
+  google_sign_in: ^6.2.1
+  cloud_firestore: ^4.15.4
+  js: ^0.6.7  # Firebase Web için gerekli
+
+  # Mevcut paketler
+  http: ^1.2.1
+  provider: ^6.0.5
+  path_provider: ^2.1.1
+  syncfusion_flutter_pdfviewer: ^27.2.5
+  cupertino_icons: ^1.0.2
+
+  # Supabase paketi
+  supabase_flutter: ^2.3.4
+
+  # Google Fonts paketi
+  google_fonts: ^6.1.0
+
+  # Font Awesome paketi
+  font_awesome_flutter: ^10.7.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^3.0.1  # Kod denetimleri için önerilen linter paketi
+
+flutter:
+  uses-material-design: true  #
+  assets:
+    - assets/pdf/
+    - assets/images/
